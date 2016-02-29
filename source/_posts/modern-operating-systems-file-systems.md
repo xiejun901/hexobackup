@@ -54,3 +54,74 @@ UNIX的文件系统中区分文件名的大小写，MS-DOS不区分。Windows 95
 早期的操作系统只提供了顺序存取， 值能从文件开始处依次读取文件， 后来的操作系统支持随机读取文件， 在 UNIX 和 Windows 中是通过 seek 来实现
 
 #### 文件属性
+
+每个文件除了由名字和数据之外， 操作系统还为文件保存了一些其他的信息， 这些额外的信息被称为文件的属性
+
+1. Protection
+	谁可以访问此文件
+2. Password
+	访问此文件的密码
+3. Creator
+	文件的创建者
+4. Owner
+	文件当前的拥有者
+5. Read-only flag
+	0 为读写， 1 为只读
+6. Hidden flag
+	0 为普通， 1 为隐藏
+7. Syste flag
+	0 为普通， 1 为系统文件
+8. Archive flag
+	0 为已经备份， 1 为需要备份
+9. ASCII/binary flag
+	0 为 ASCII 文件， 1 为二进制问津啊
+10. Random access flag
+	0 为只能顺序读写， 1 为可以随机访问
+11. Temporary flag
+	0 为普通文件， 1 为临时文件， 在进程结束时删除
+12. Lock flag
+	0 表示未加锁， 非零表示文件已加锁
+13. Record length
+	记录中的字节数
+14. Key position
+	每条记录的偏移
+15. Key length
+	key的字节数
+16. Create time
+	文件创建的时间
+17. Time of last access
+	文件的最后访问时间
+18. Time of last change
+	文件的最后修改时间
+19. Current size
+	当前文件的大小(字节数)
+20. Maximum size
+	文件的最大大小(字节数)
+
+以上的属性并不是每个系统都全部拥有， 但是每个都出现在某一个操作系统中
+
+#### 文件的操作
+
+1. Create
+	创建一个不含数据的文件
+2. Delete
+	删除一个文件
+3. Open
+	进程通过此操作打开一个文件
+4. Close
+	进程通过此操作关闭一个文件
+5. Read
+	从文件中读取数据，通常需要提供长度
+6. Write
+	向文件中写入数据
+7. Append
+	在文件结尾处添加数据， 有的操作系统不提供此操作
+8. Seek
+	对于随机访问文件，通过此操作移动到某个位置
+9. Get attributes
+	读取文件的属性
+10. Set attributes
+	设置文件的树形
+11. Rename 
+	对已经存在的文件进行重命名
+	
