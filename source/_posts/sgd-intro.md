@@ -1,7 +1,7 @@
 title: sgd 中的优化方法
 date: 2017-07-03 00:08:38
 tags: [sgd, machine learning]
-categories: machine laearning
+categories: machine learning
 ---
 
 最近在看 [fast.ai 上的深度学习教程](http://course.fast.ai/) ，这儿对学习到的内容做一个笔记。结合网上找到的相关资料对sgd中的优化算法做一个记录。具体的代码使用两个参数的线性回归作为例子: y = a*x + b

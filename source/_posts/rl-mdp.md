@@ -1,7 +1,7 @@
 title: 强化学习-MDP
 date: 2017-08-21 23:10:23
 tags: [强化学习, 机器学习, MDP]
-categories: machine laearning
+categories: machine learning
 ---
 
 ### markov process
@@ -168,7 +168,7 @@ $$
 
 
 $$
-v_\*(s)=max_{a} q_{\*}(s,a)
+v_\*(s)=\mathop {max}_{a} q_{\*}(s,a)
 $$
 
            q*(s,a) <- a   .
@@ -187,7 +187,7 @@ $$
        v*(s') <- s'  o   o o   o
 
 $$
-v_\*(s)=max_{a} [R_s^a + \gamma \sum_{s^\prime \in S}{P_{ss^\prime}^a v_\*(s^\prime)}]
+v_\*(s)=\mathop {max}_{a} [R_s^a + \gamma \sum_{s^\prime \in S}{P_{ss^\prime}^a v_\*(s^\prime)}]
 $$
 
               q*(s,a) <- a    .
@@ -197,5 +197,5 @@ $$
         q*(s',a') <- a'  .   . .   .
 
 $$
-q_\*(s,a)=R_s^a + \gamma \sum_{s^\prime \in S}{P_{ss^\prime}^a max_{a^\prime}{q_\*(s^\prime,a^\prime)}}
+q_\*(s,a)=R_s^a + \gamma \sum_{s^\prime \in S}{P_{ss^\prime}^a \mathop {max}_{a^\prime}{q_\*(s^\prime,a^\prime)}}
 $$
